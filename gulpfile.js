@@ -4,6 +4,7 @@
 
 const gulp = require('gulp');
 const browserSync = require('browser-sync');
+const connect = require('gulp-connect-php');
 const rename = require('gulp-rename');
 const filter = require('gulp-ignore');
 const minifyInline = require('gulp-minify-inline');
@@ -20,6 +21,10 @@ let developmentFolder = 'src';
 let productionFolder = 'dist';
 let moveFiles = [
 			'*.png',
+			'*.svg',
+			'*.ttf',
+			'*.woff',
+			'*.woff2',
 ];
 
 
