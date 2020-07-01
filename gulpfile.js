@@ -21,12 +21,7 @@ const sftp = require('gulp-sftp-up4');
 let developmentFolder = 'src';
 let productionFolder = 'dist';
 let moveFiles = [
-			'*.png',
-			'*.ico',
-			'*.svg',
-			'*.ttf',
-			'*.woff',
-			'*.woff2',
+			'files/**'
 ];
 
 

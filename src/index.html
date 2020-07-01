@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>Jonas Brüggen | Lebenslauf</title>
-		<link rel="icon" href="icon_colored.ico">
+		<link rel="icon" href="files/icon_colored.ico">
 		<meta name="author" content="www.jonas-brueggen.de" />
 		<meta name="viewport" content="width=device-width">
 		<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.2.0/dist/confetti.browser.min.js"></script>
@@ -12,9 +12,9 @@
 		font-family: "Montserrat";
 
 		src: local('Montserrat'),
-			url("/montserrat-regular.woff2") format("woff2"),
-			url("/montserrat-regular.woff") format("woff"),
-			url("/montserrat-regular.ttf") format("truetype");
+			url("/files/montserrat-regular.woff2") format("woff2"),
+			url("/files/montserrat-regular.woff") format("woff"),
+			url("/files/montserrat-regular.ttf") format("truetype");
 		font-weight: normal;
 		font-style: normal;
 		font-display: swap;
@@ -23,9 +23,9 @@
 		font-family: "Montserrat";
 
 		src: local('Montserrat'),
-			url("/montserrat-bold.woff2") format("woff2"),
-			url("/montserrat-bold.woff") format("woff"),
-			url("/montserrat-bold.ttf") format("truetype");
+			url("/files/montserrat-bold.woff2") format("woff2"),
+			url("/files/montserrat-bold.woff") format("woff"),
+			url("/files/montserrat-bold.ttf") format("truetype");
 		font-weight: bold;
 		font-style: normal;
 		font-display: swap;
@@ -54,9 +54,15 @@
 		grid-template-rows: 3vh auto;
 		font-family: 'Montserrat', sans-serif;
 		text-rendering: optimizeLegibility;
-		letter-spacing: 0.02em;
+		letter-spacing: 0.025em;
 		color: hsla(200, 95%, 8%, 1);
-		font-size: 10pt;
+		font-size: 11pt;
+	}
+
+	@media print {
+		body {
+			font-size: 9pt;
+		}
 	}
 
 	header {
@@ -88,6 +94,12 @@
 		height: 1px;
 		transition: width .2s ease-in-out;
 	}
+	
+	@media print {
+		a:after {
+			content: unset;
+		}
+	}
 
 	a:hover:after {
 		width: 100%;
@@ -96,13 +108,13 @@
 
 
 	h2 {
-		font-size: 14pt;
+		font-size: 1.4em;
 		font-weight: bold;
 		margin-top: 1.5rem
 	}
 	h3 {
-		font-size: 12pt;
-		margin-top: 1rem
+		font-size: 1.2em;
+		margin-top: .8rem
 	}
 
 	li {
@@ -110,9 +122,8 @@
 	}
 
 	p, li {
-		margin-top: 0.5rem;
+		margin-top: 0.4rem;
 		line-height: 1.3rem;
-		font-size: 9pt;
 	}
 
 	section {
@@ -120,16 +131,22 @@
 		padding: 0 6vw;
 	}
 
+	@media print {
+		section {
+			padding: 0 6vw 0 10vw; /*21mm left*/
+		}
+	}
+
 	section .title {
 		text-align: center;
 		width: 100%;
-		margin: 3vh 0;
+		margin: 3vh 0 5vh;
 	}
 	section .title h1 {
-		font-size: 20pt;
+		font-size: 2em;
 	}
 	section .title h2 {
-		font-size: 16pt;
+		font-size: 1.6em;
 	}
 	section .title h1, .title h2 {
 		margin: 0;
@@ -145,7 +162,7 @@
 	section h3.stars {
 		margin-top: .7rem;
 		letter-spacing: .1em;
-		font-size: 14pt;
+		font-size: 1.4em;
 		color: hsla(40, 80%, 58%, 1);
 		transition: letter-spacing 0.15s cubic-bezier(0.45, 0.4, 0.55, 1.45);
 	}
@@ -219,12 +236,12 @@
 		}
 	}
 	
-	aside ul.contact li {
+	aside ul.cool_stuff li, aside ul.contact li {
 		position: relative;
 		padding-left: 1.5rem;
 	}
 
-	aside ul.contact li:before {
+	aside ul.cool_stuff li:before, aside ul.contact li:before {
 		content:'';
 		position: absolute;
 		display: block;
@@ -236,11 +253,21 @@
 		background-repeat: no-repeat;
 		background-position: center center;
 	}
-	aside ul.contact li.dob:before {background-image: url("/dob.svg");}
-	aside ul.contact li.address:before {background-image: url("/address.svg");}
-	aside ul.contact li.phone:before {background-image: url("/phone.svg");}
-	aside ul.contact li.mail:before {background-image: url("/mail.svg");}
-	aside ul.contact li.skype:before {background-image: url("/skype.svg");}
+	aside ul.contact li.dob:before {background-image: url("/files/dob.svg");}
+	aside ul.contact li.address:before {background-image: url("/files/address.svg");}
+	aside ul.contact li.phone:before {background-image: url("/files/phone.svg");}
+	aside ul.contact li.mail:before {background-image: url("/files/mail.svg");}
+	aside ul.contact li.skype:before {background-image: url("/files/skype.svg");}
+
+	aside ul.cool_stuff li.git:before {background-image: url("/files/git.svg");}
+	aside ul.cool_stuff li.web:before {background-image: url("/files/web.svg");}
+
+	@media print {
+		aside ul.contact li.dob a {
+			color: hsla(200, 95%, 8%, 1);
+			cursor: normal;
+		}
+	}
 	
 	aside div:last-of-type {
 		margin-bottom: 2vh;
@@ -295,8 +322,8 @@
 		</section>
 		<aside>
 			<div class="profile" onclick="this.classList.toggle('flipped');">
-				<img class="color" src="cv-profil.png" />
-				<img src="cv-profil.png" />
+				<img class="color" src="files/cv-profil.png" />
+				<img src="files/cv-profil.png" />
 			</div>
 
 			<div>
@@ -318,7 +345,7 @@ confetti({
 					<li class="address"><a href="https://g.page/jb-dev" target="_blank">Darmstädter Str. 4<br>D-50678 Köln</a></li>
 					<li class="phone"><a href="tel:+4915759073485">+49 1575 907 3485</a></li>
 					<li class="mail"><a href="mailto:mail@jonas-brueggen.de" target="_blank">mail@jonas-brueggen.de</a></li>
-					<li class="skype"><a href="skype:skype@jonas-brueggen.de">skype@jonas-brueggen.de</a></li>
+					<li class="skype"><a href="skype:jonas.brueggen@gmail.com">skype@jonas-brueggen.de</a></li>
 				</ul>
 			</div>
 			
@@ -337,7 +364,7 @@ confetti({
 			
 			<div>
 				<h2>Portfolio</h2>
-				<ul>
+				<ul class="cool_stuff">
 					<li class="web"><a href="https://jonas-brueggen.de" target="_blank">jonas-brueggen.de</a></li>
 					<li class="git"><a href="https://github.com/ZipJo" target="_blank">github.com/ZipJo</a></li>
 				</ul>
@@ -346,7 +373,7 @@ confetti({
 			<div>
 				<h2>Referenzen</h2>
 				<ul>
-					<li class="screen"><a href="Jonas Brüggen - Zwischenzeugnis RE.pdf" target="_blank">Zwischenzeugnis der RheinEnergie AG</a></li>
+					<li class="screen"><a href="files/Jonas Brüggen - Zwischenzeugnis RE.pdf" target="_blank">Zwischenzeugnis der RheinEnergie AG</a></li>
 					<li class="print">Zwischenzeugnis der RheinEnergie AG, als Anhang</li>
 				</ul>
 			</div>
