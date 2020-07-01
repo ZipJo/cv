@@ -10,6 +10,7 @@ const filter = require('gulp-ignore');
 const minifyInline = require('gulp-minify-inline');
 const htmlmin = require('gulp-htmlmin');
 const fileinclude = require('gulp-file-include');
+const sftp = require('gulp-sftp-up4');
 
 
 
@@ -21,6 +22,7 @@ let developmentFolder = 'src';
 let productionFolder = 'dist';
 let moveFiles = [
 			'*.png',
+			'*.ico',
 			'*.svg',
 			'*.ttf',
 			'*.woff',
@@ -106,3 +108,20 @@ gulp.task('move', function(){
 
 //main build task
 gulp.task('build', gulp.series('compile-index', 'minify-index', 'move'));
+
+// ------------
+// upload-tasks
+// ------------
+
+let sftpParams = {
+	host: 'jonas-brueggen.de',
+	remotePath: '/cv.jonas-brueggen.de/httpdocs/',
+	auth: 'connectionParams'
+};
+
+gulp.task('sftp', function () {
+	return gulp.src(productionFolder+"/**", { dot: true })
+		.pipe(sftp(sftpParams));
+});
+
+gulp.task('build-sftp', gulp.series('build', 'sftp'));
