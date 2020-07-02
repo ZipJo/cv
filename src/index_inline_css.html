@@ -44,15 +44,15 @@
 		grid-template-columns: 2fr 1fr;
 		grid-template-rows: 3vh auto;
 		font-family: 'Montserrat', sans-serif;
-		text-rendering: optimizeLegibility;
 		letter-spacing: 0.025em;
 		color: hsla(200, 95%, 8%, 1);
 		font-size: 11pt;
+		overflow-x: hidden;
 	}
 
 	@media print {
 		body {
-			font-size: 9pt;
+			font-size: 6pt;
 		}
 	}
 
@@ -99,13 +99,13 @@
 
 
 	h2 {
-		font-size: 1.4em;
+		font-size: 1.6em;
 		font-weight: bold;
-		margin-top: 1.5rem
+		margin-top: 1.5em
 	}
 	h3 {
-		font-size: 1.2em;
-		margin-top: .8rem
+		font-size: 1.3em;
+		margin-top: .9em
 	}
 
 	li {
@@ -113,8 +113,8 @@
 	}
 
 	p, li {
-		margin-top: 0.4rem;
-		line-height: 1.3rem;
+		margin-top: 0.6em;
+		line-height: 1.5em;
 	}
 
 	section {
@@ -124,7 +124,7 @@
 
 	@media print {
 		section {
-			padding: 0 6vw 0 10vw; /*21mm left*/
+			padding: 0 5vw 0 9.5vw; /*20mm left*/
 		}
 	}
 
@@ -137,7 +137,9 @@
 		font-size: 2em;
 	}
 	section .title h2 {
-		font-size: 1.6em;
+		font-size: 1.7em;
+		line-height: 1.4em;
+		font-weight: normal;
 	}
 	section .title h1, .title h2 {
 		margin: 0;
@@ -151,19 +153,19 @@
 	}
 
 	section h3.stars {
-		margin-top: .7rem;
+		margin-top: .7em;
 		letter-spacing: .1em;
 		font-size: 1.4em;
 		color: hsla(40, 80%, 58%, 1);
-		transition: letter-spacing 0.15s cubic-bezier(0.45, 0.4, 0.55, 1.45);
+		transition: letter-spacing 0.1s cubic-bezier(0.45, 0.4, 0.55, 1.45);
 	}
 	section h3.stars:hover {
-		letter-spacing: .3em;
+		letter-spacing: .2em;
 	}
 	section h3.stars span {
 		letter-spacing: .1em;
 		color: hsla(200, 95%, 8%, .5);
-		transition: color 0.15s ease-in-out;
+		transition: color 0.1s ease-in-out;
 	}
 	section h3.stars:hover span {
 		color: hsla(200, 95%, 8%, .2);
@@ -229,7 +231,7 @@
 	
 	aside ul.cool_stuff li, aside ul.contact li {
 		position: relative;
-		padding-left: 1.5rem;
+		padding-left: 2em;
 	}
 
 	aside ul.cool_stuff li:before, aside ul.contact li:before {
@@ -237,9 +239,9 @@
 		position: absolute;
 		display: block;
 		left: 0;
-		top: 0.1rem;
-		width: 1rem;
-		height: 1rem;
+		top: 0.15em;
+		width: 1.2em;
+		height: 1.2em;
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center center;
@@ -256,8 +258,13 @@
 	@media print {
 		aside ul.contact li.dob a {
 			color: hsla(200, 95%, 8%, 1);
-			cursor: normal;
+			cursor: default;
 		}
+	}
+
+	aside div.education span {
+		font-size: .8em;
+		font-weight: bold;
 	}
 	
 	aside div:last-of-type {
@@ -266,7 +273,7 @@
 
 	aside .date {
 		margin: auto 0 1.5vh;
-		font-size: 8pt;
+		font-size: .8em;
 		color: hsla(200, 95%, 8%, .5);
 	}
 	aside .date span {
