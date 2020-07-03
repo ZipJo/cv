@@ -28,12 +28,12 @@
 	}
 
 	@media screen {
-		li.screen { display: initial; }
-		li.print { display: none; }
+		.only_screen { display: block; }
+		.only_print { display: none; }
 	}
 	@media print {
-		li.screen { display: none; }
-		li.print { display: initial; }
+		.only_screen { display: none; }
+		.only_print { display: block; }
 	}
 	
 	body {
@@ -52,7 +52,7 @@
 
 	@media print {
 		body {
-			font-size: 6pt;
+			font-size: 7pt;
 		}
 	}
 
@@ -64,7 +64,7 @@
 
 	h1, h2, h3 {
 		text-transform: uppercase;
-		letter-spacing: 0.1em;
+		letter-spacing: 0.08em;
 		font-weight: normal;
 	}
 	
@@ -101,15 +101,19 @@
 	h2 {
 		font-size: 1.6em;
 		font-weight: bold;
-		margin-top: 1.5em
-	}
-	h3 {
-		font-size: 1.3em;
-		margin-top: .9em
+		margin-top: 1.5em;
 	}
 
-	li {
-		list-style-type: none;
+	@media print {
+		h2 {
+			margin-top: .9em;
+		}
+	}
+
+	h3 {
+		font-size: 1.3em;
+		margin-top: .9em;
+		line-height: 1.2em;
 	}
 
 	p, li {
@@ -119,20 +123,24 @@
 
 	section {
 		background: transparent;
-		padding: 0 6vw;
-	}
-
-	@media print {
-		section {
-			padding: 0 5vw 0 9.5vw; /*20mm left*/
-		}
+		padding: 0 6vw 3vh;
 	}
 
 	section .title {
 		text-align: center;
 		width: 100%;
-		margin: 3vh 0 5vh;
+		margin: 3vh 0;
 	}
+
+	@media print {
+		section {
+			padding: 0 4vw 0 9.5vw; /*20mm left*/
+		}
+		section .title {
+			margin: 2vh 0 1.3vh;
+		}
+	}
+
 	section .title h1 {
 		font-size: 2em;
 	}
@@ -150,6 +158,12 @@
 		width: 20%;
 		margin: 1.5vh auto;
 		background: hsla(200, 95%, 15%, 1);
+	}
+
+	section .career li {
+		margin-top: 0.4em;
+		list-style-type: disc;
+		margin-left: 1em;
 	}
 
 	section h3.stars {
@@ -171,14 +185,23 @@
 		color: hsla(200, 95%, 8%, .2);
 	}
 
-
 	aside {
 		background: hsla(200, 95%, 8%, .15);
 		display: flex;
 		flex-direction: column;
-		padding: 0 3vw;
+		padding: 0 3vw 3vh;
 		perspective: 5000px;
 		perspective-origin: 50% 20%;
+	}
+
+	@media print {
+		aside {
+			padding: 0 5vw 3vh;
+		}
+	}
+
+	aside li {
+		list-style-type: none;
 	}
 
 	aside div {
@@ -227,6 +250,22 @@
 		aside img.color {
 			display: none;
 		}
+	}
+
+	aside div.lang {
+		position: relative;
+	}
+	aside div.lang p span {
+		position: relative;
+		display: inline-block;
+		transform: rotateZ(0deg);
+		transition: transform 0.3s cubic-bezier(0.45, 0.3, 0.55, 1.25);
+	}
+	aside div.lang:hover p > span {
+		transform: rotateZ(180deg);
+	}
+	aside div.lang:hover p > span > span {
+		transform: rotateZ(-180deg);
 	}
 	
 	aside ul.cool_stuff li, aside ul.contact li {
@@ -277,7 +316,7 @@
 		color: hsla(200, 95%, 8%, .5);
 	}
 	aside .date span {
-		width: 15%;
+		width: 25%;
 		display: inline-block;
 	}
 </style>

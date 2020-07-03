@@ -37,12 +37,12 @@
 	}
 
 	@media screen {
-		li.screen { display: initial; }
-		li.print { display: none; }
+		.only_screen { display: block; }
+		.only_print { display: none; }
 	}
 	@media print {
-		li.screen { display: none; }
-		li.print { display: initial; }
+		.only_screen { display: none; }
+		.only_print { display: block; }
 	}
 	
 	body {
@@ -61,7 +61,7 @@
 
 	@media print {
 		body {
-			font-size: 6pt;
+			font-size: 7pt;
 		}
 	}
 
@@ -73,7 +73,7 @@
 
 	h1, h2, h3 {
 		text-transform: uppercase;
-		letter-spacing: 0.1em;
+		letter-spacing: 0.08em;
 		font-weight: normal;
 	}
 	
@@ -110,15 +110,19 @@
 	h2 {
 		font-size: 1.6em;
 		font-weight: bold;
-		margin-top: 1.5em
-	}
-	h3 {
-		font-size: 1.3em;
-		margin-top: .9em
+		margin-top: 1.5em;
 	}
 
-	li {
-		list-style-type: none;
+	@media print {
+		h2 {
+			margin-top: .9em;
+		}
+	}
+
+	h3 {
+		font-size: 1.3em;
+		margin-top: .9em;
+		line-height: 1.2em;
 	}
 
 	p, li {
@@ -128,20 +132,24 @@
 
 	section {
 		background: transparent;
-		padding: 0 6vw;
-	}
-
-	@media print {
-		section {
-			padding: 0 5vw 0 9.5vw; /*20mm left*/
-		}
+		padding: 0 6vw 3vh;
 	}
 
 	section .title {
 		text-align: center;
 		width: 100%;
-		margin: 3vh 0 5vh;
+		margin: 3vh 0;
 	}
+
+	@media print {
+		section {
+			padding: 0 4vw 0 9.5vw; /*20mm left*/
+		}
+		section .title {
+			margin: 2vh 0 1.3vh;
+		}
+	}
+
 	section .title h1 {
 		font-size: 2em;
 	}
@@ -159,6 +167,12 @@
 		width: 20%;
 		margin: 1.5vh auto;
 		background: hsla(200, 95%, 15%, 1);
+	}
+
+	section .career li {
+		margin-top: 0.4em;
+		list-style-type: disc;
+		margin-left: 1em;
 	}
 
 	section h3.stars {
@@ -180,14 +194,23 @@
 		color: hsla(200, 95%, 8%, .2);
 	}
 
-
 	aside {
 		background: hsla(200, 95%, 8%, .15);
 		display: flex;
 		flex-direction: column;
-		padding: 0 3vw;
+		padding: 0 3vw 3vh;
 		perspective: 5000px;
 		perspective-origin: 50% 20%;
+	}
+
+	@media print {
+		aside {
+			padding: 0 5vw 3vh;
+		}
+	}
+
+	aside li {
+		list-style-type: none;
 	}
 
 	aside div {
@@ -236,6 +259,22 @@
 		aside img.color {
 			display: none;
 		}
+	}
+
+	aside div.lang {
+		position: relative;
+	}
+	aside div.lang p span {
+		position: relative;
+		display: inline-block;
+		transform: rotateZ(0deg);
+		transition: transform 0.3s cubic-bezier(0.45, 0.3, 0.55, 1.25);
+	}
+	aside div.lang:hover p > span {
+		transform: rotateZ(180deg);
+	}
+	aside div.lang:hover p > span > span {
+		transform: rotateZ(-180deg);
 	}
 	
 	aside ul.cool_stuff li, aside ul.contact li {
@@ -286,7 +325,7 @@
 		color: hsla(200, 95%, 8%, .5);
 	}
 	aside .date span {
-		width: 15%;
+		width: 25%;
 		display: inline-block;
 	}
 </style>
@@ -301,26 +340,38 @@
 				<span></span>
 				<h2>Web Developer</h2>
 			</div>
-
-			<h2>Berufsweg</h2>
 			
-			<h3>Seit 2011: RheinEnergie AG</h3>
-			<p>Ausbildung zum Informatiker im Rahmen eines Dualen Studiums bei der RheinEnergie AG. Vollzeit angestellt seit Dezember 2014 im Bereich Prozessautomation.<br/>
-			Die RheinEnergie AG ist der Grundversorger der Stadt Köln und Umgebung mit etwa drei millionen Kunden und 2.500 Mitarbeitern.</p>
-			<p>Schwerpunktmäßige Arbeit rund um die Software SAP-BPA, ein Automationstool für SAP und sonstiger Software zum automatisieren von Geschäftsprozessen. Linienaufgaben geprägt von Prozesskonzeption, Implementierung und Pflege. Enge Zusammenarbeit mit den Bereichen HR, Kundenabrechnung und Trading, sowie nahezu allen IT-Bereichen. Arbeit mit diversen Protokollen, zur Übersetzung und Unterstützung von verschiedenen APIs, insbesondere SAP, SEPA, FTP, SNMP, REST und SOAP.</p>
-			<p>Seit anfang 2018: Im Langzeiturlaub / ruhendes Arbeitsverhältnis (Weltreise)</p>
-			
-			<h3>Seit 2018: Selbstständigkeit als Full Stack Webentwickler</h3>
-			<p>Remote-Kundenakquise</p>
+			<div class="career">
+				<h2>Berufsweg</h2>
+				
+				<h3>Seit 2011: RheinEnergie AG</h3>
+				<p>Ausbildung zum Informatiker im Rahmen eines dualen Studiums bei der RheinEnergie AG. Vollzeit angestellt seit Dezember 2014 im Bereich Prozessautomation.<br/>
+				Die RheinEnergie AG ist der Grundversorger der Stadt Köln und Umgebung mit etwa drei Millionen Kunden und 2.500 Mitarbeitern.</p>
+				<p>Schwerpunktmäßige Arbeit rund um die Software SAP-BPA, ein Automationstool für SAP und sonstige Software zur Automatisierung von Geschäftsprozessen. Linienaufgaben geprägt von Prozesskonzeption, Implementierung und Pflege. Enge Zusammenarbeit mit den Bereichen HR, Kundenabrechnung und Trading, sowie nahezu allen IT-Bereichen. Arbeit mit diversen Protokollen, zur Übersetzung und Unterstützung von verschiedenen APIs, insbesondere SAP, SEPA, FTP, SNMP, REST und SOAP.</p>
+				<p>Seit Anfang 2018: im Langzeiturlaub / ruhendes Arbeitsverhältnis (Weltreise).</p>
+				
+				<h3>Seit 2018: Selbstständigkeit als Full Stack Webentwickler</h3>
+				<p>Erweiterung der Arbeit auf das Gebiet der Webentwicklung und Vertiefung der entsprechenden Skills.</p>
+				<p>Wichtige Aufgabenbereiche:</p>
+				<ul>
+					<li>Planung von Projektumfang und -dauer.</li>
+					<li>Laufende Kommunikation mit Kunden zur Präsentation von Meilensteinen und Rücksprachen für den kontinuierlichen Verbesserungsprozess.</li>
+					<li>Technische Umsetzung von Styleguides, sowie die Interpretation und Implementierung von Ideen.</li>
+					<li>Einsatz einer geeigneten Entwicklungsumgebung für die Umsetzung von Designs.</li>
+					<li>Einrichtung von WordPress, Nextcloud, RoundCube und MySQL-Instanzen.</li>
+					<li>Programmierung in HTML, CSS und JavaScript, sowie die Einbindung von SQL, SMTP und LDAP mit PHP.</li>
+					<li>Einsatz von Node für die Entwicklungsumgebung und gulp.js als Build-Tool, sowie GitHub zur Versionierung.</li>
+				</ul>
+			</div>
 			
 
 			<h2>Skills</h2>
 			<h3 class="stars">★★★★★</h3>
-			<p>HTML5, CSS3, SASS, JavaScript (ES6), gulp.js, Git, three.js, Pug, Java, SAP-BPA, MultiCash</p>
+			<p>HTML5, CSS3, SASS, JavaScript (ES6), gulp.js, Git, three.js, Pug, Java (EE), SAP-BPA, MultiCash</p>
 			<h3 class="stars">★★★★<span>★</span></h3>
-			<p>jQuery, Node.js, SQL (insb. MS SQL, Oracle, MySQL, SQLite), REST (mit J2EE), SOAP, C++</p>
+			<p>jQuery, Node.js, SQL (insb. MySQL, SQLite, MS SQL, Oracle), C++</p>
 			<h3 class="stars">★★★<span>★★</span></h3>
-			<p>Angular, php, SVN, TypeScript, LDAP, SharePoint/VB</p>
+			<p>AngularJS, PHP, SVN, TypeScript, LDAP, SharePoint/VB</p>
 			
 			<h2>Relevante Interessen</h2>
 			<p>Layouting, UX-Design, Open Source, SEO, VR, AR, Crypto & Sicherheit</p>
@@ -329,7 +380,7 @@
 			<h3>2010 - 2018: Pfadfinder in Köln</h3>
 			<p>Jugendgruppenleiter (6 Jahre), Geschäftsführer (4 Jahre), Webmaster (7 Jahre), Projektleitung bei Großveranstaltungen.</p>
 			<h3>2018 & 2019: Verschiedene Ehrenämter</h3>
-			<p>Innenausbau Berghütte; IT Unterstützung im Botanischen Garten; Design und Aufbau von einem Pop-Up Café; Kletterlehrer</p>
+			<p>Innenausbau Berghütte; IT Unterstützung im Botanischen Garten; Design und Aufbau von einem Pop-up Café; Kletterlehrer</p>
 			<h3>Und sonst so?</h3>
 			<p>Klettert (in jeglicher Form, am liebsten am Fels), kocht viel und gerne, Kaffeenerd, Handwerker.</p>
 		</section>
@@ -358,7 +409,7 @@ confetti({
 					<li class="address"><a href="https://g.page/jb-dev" target="_blank">Darmstädter Str. 4<br />D-50678 Köln</a></li>
 					<li class="phone"><a href="tel:+4915759073485">+49 1575 907 3485</a></li>
 					<li class="mail"><a href="mailto:mail@jonas-brueggen.de" target="_blank">mail@jonas-brueggen.de</a></li>
-					<li class="skype"><a href="skype:live:.cid.8ae6d35bd6d72767?add">skype@jonas-brueggen.de</a></li>
+					<li class="skype"><a href="skype:live:.cid.8ae6d35bd6d72767">skype@jonas-brueggen.de</a></li>
 				</ul>
 			</div>
 			
@@ -367,12 +418,12 @@ confetti({
 				<h3>Ausbildung</h3>
 				<p>Fachinformatiker Systemintegration<br /><span>2013, Köln</span></p>
 				<h3>Studium</h3>
-				<p>B. Sc. Wirtschaftinformatik / IT-Consulting<br /><span>2014, Bergisch-Gladbach</span></p>
+				<p>B. Sc. Wirtschaftsinformatik / IT-Consulting<br /><span>2014, Bergisch-Gladbach</span></p>
 			</div>
 			
-			<div>
+			<div class="lang">
 				<h2>Sprachen</h2>
-				<p>Bilingual, Deutsch und Englisch</p>
+				<p>Bilingual, <span><span>Deutsch</span> <span>und</span> <span>Englisch</span></span></p>
 			</div>
 			
 			<div>
@@ -386,12 +437,12 @@ confetti({
 			<div>
 				<h2>Referenzen</h2>
 				<ul>
-					<li class="screen"><a href="files/Jonas Brüggen - Zwischenzeugnis RE.pdf" target="_blank">Zwischenzeugnis der RheinEnergie AG</a></li>
-					<li class="print">Zwischenzeugnis der RheinEnergie AG, als Anhang</li>
+					<li class="only_screen"><a href="files/Jonas Brüggen - Zwischenzeugnis RE.pdf" target="_blank">Zwischenzeugnis der RheinEnergie AG</a></li>
+					<li class="only_print">Zwischenzeugnis der RheinEnergie AG, als Anhang</li>
 				</ul>
 			</div>
 
-			<h4 class="date">Zuletzt aktualisiert:<span></span>01.07.2020</h4>
+			<h4 class="date">Zuletzt aktualisiert:<span></span>03.07.2020</h4>
 		</aside>
 	</body>
 </html>
