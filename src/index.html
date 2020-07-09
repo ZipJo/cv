@@ -182,7 +182,7 @@
 		color: hsla(40, 80%, 58%, 1);
 		transition: letter-spacing 0.1s cubic-bezier(0.45, 0.4, 0.55, 1.45);
 	}
-	section h3.stars:hover {
+	section .skills:hover h3.stars {
 		letter-spacing: .2em;
 	}
 	section h3.stars span {
@@ -190,7 +190,7 @@
 		color: hsla(200, 95%, 8%, .5);
 		transition: color 0.1s ease-in-out;
 	}
-	section h3.stars:hover span {
+	section .skills:hover h3.stars span {
 		color: hsla(200, 95%, 8%, .2);
 	}
 
@@ -366,12 +366,18 @@
 			
 
 			<h2>Skills</h2>
-			<h3 class="stars">★★★★★</h3>
-			<p>HTML5, CSS3, SASS, JavaScript (ES6), gulp.js, Git, three.js, Pug, Java (EE), SAP-BPA, MultiCash</p>
-			<h3 class="stars">★★★★<span>★</span></h3>
-			<p>jQuery, Node.js, SQL (insb. MySQL, SQLite, MS SQL, Oracle), C++</p>
-			<h3 class="stars">★★★<span>★★</span></h3>
-			<p>AngularJS, PHP, SVN, TypeScript, LDAP, SharePoint/VB</p>
+			<div class="skills">
+				<h3 class="stars">★★★★★</h3>
+				<p>HTML5, CSS3, SASS, JavaScript (ES6), gulp.js, Git, three.js, Pug, Java (EE), SAP-BPA, MultiCash</p>
+			</div>
+			<div class="skills">
+				<h3 class="stars">★★★★<span>★</span></h3>
+				<p>jQuery, Node.js, SQL (insb. MySQL, SQLite, MS SQL, Oracle), C++</p>
+			</div>
+			<div class="skills">
+				<h3 class="stars">★★★<span>★★</span></h3>
+				<p>AngularJS, PHP, SVN, TypeScript, LDAP, SharePoint/VB</p>
+			</div>
 			
 			<h2>Relevante Interessen</h2>
 			<p>Layouting, UX-Design, Open Source, SEO, VR, AR, Crypto & Sicherheit</p>
