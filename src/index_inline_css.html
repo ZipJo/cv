@@ -1,22 +1,16 @@
 <style>
 	@font-face {
-		font-family: "Montserrat";
+		font-family: 'Montserrat';
 
-		src: local('Montserrat'),
-			url("/files/montserrat-regular.woff2") format("woff2"),
-			url("/files/montserrat-regular.woff") format("woff"),
-			url("/files/montserrat-regular.ttf") format("truetype");
+		src: local('Montserrat'), url('/files/montserrat-regular.woff2') format('woff2'), url('/files/montserrat-regular.woff') format('woff'), url('/files/montserrat-regular.ttf') format('truetype');
 		font-weight: normal;
 		font-style: normal;
 		font-display: swap;
 	}
 	@font-face {
-		font-family: "Montserrat";
+		font-family: 'Montserrat';
 
-		src: local('Montserrat'),
-			url("/files/montserrat-bold.woff2") format("woff2"),
-			url("/files/montserrat-bold.woff") format("woff"),
-			url("/files/montserrat-bold.ttf") format("truetype");
+		src: local('Montserrat'), url('/files/montserrat-bold.woff2') format('woff2'), url('/files/montserrat-bold.woff') format('woff'), url('/files/montserrat-bold.ttf') format('truetype');
 		font-weight: bold;
 		font-style: normal;
 		font-display: swap;
@@ -28,14 +22,22 @@
 	}
 
 	@media screen {
-		.only_screen { display: block; }
-		.only_print { display: none; }
+		.only_screen {
+			display: block;
+		}
+		.only_print {
+			display: none;
+		}
 	}
 	@media print {
-		.only_screen { display: none; }
-		.only_print { display: block; }
+		.only_screen {
+			display: none;
+		}
+		.only_print {
+			display: block;
+		}
 	}
-	
+
 	body {
 		min-height: 100vh;
 		width: 100vw;
@@ -62,30 +64,35 @@
 		background: hsla(200, 95%, 15%, 1);
 	}
 
-	h1, h2, h3 {
+	h1,
+	h2,
+	h3 {
 		text-transform: uppercase;
 		letter-spacing: 0.08em;
 		font-weight: normal;
 	}
-	
-	a, a:visited, a:hover {
+
+	a,
+	a:visited,
+	a:hover {
 		color: hsla(185, 95%, 33%, 1);
 		text-decoration: none;
 		position: relative;
 		cursor: pointer;
+		display: inline-block;
 	}
 	a:after {
 		content: '';
 		width: 0%;
-		position:absolute;
+		position: absolute;
 		display: block;
 		bottom: -5px;
 		right: 0;
 		background: hsla(185, 95%, 33%, 1);
 		height: 1px;
-		transition: width .2s ease-in-out;
+		transition: width 0.2s ease-in-out;
 	}
-	
+
 	@media print {
 		a:after {
 			content: unset;
@@ -97,7 +104,6 @@
 		left: 0;
 	}
 
-
 	h2 {
 		font-size: 1.6em;
 		font-weight: bold;
@@ -106,17 +112,18 @@
 
 	@media print {
 		h2 {
-			margin-top: .9em;
+			margin-top: 0.9em;
 		}
 	}
 
 	h3 {
 		font-size: 1.3em;
-		margin-top: .9em;
+		margin-top: 0.9em;
 		line-height: 1.2em;
 	}
 
-	p, li {
+	p,
+	li {
 		margin-top: 0.6em;
 		line-height: 1.5em;
 	}
@@ -149,7 +156,8 @@
 		line-height: 1.4em;
 		font-weight: normal;
 	}
-	section .title h1, .title h2 {
+	section .title h1,
+	.title h2 {
 		margin: 0;
 	}
 	section .title span {
@@ -166,27 +174,48 @@
 		margin-left: 1em;
 	}
 
+	section .skills:hover {
+		cursor: pointer;
+	}
+	section .skills .info {
+		visibility: hidden;
+		display: block;
+		max-height: 0;
+		opacity: 0;
+		overflow-y: hidden;
+		transition: all 0.2s ease-in-out;
+		box-shadow: 2px 2px 5px 0px hsla(0, 0%, 0%, 0.2);
+		margin: 0em 1.5em;
+		padding: 0em 1em;
+	}
+	section .skills.info .info {
+		visibility: visible;
+		max-height: 3em;
+		margin: 0.5em 1.5em;
+		padding: 0.8em 1em;
+		opacity: 1;
+	}
 	section h3.stars {
-		margin-top: .7em;
-		letter-spacing: .1em;
+		margin-top: 0.7em;
+		letter-spacing: 0.1em;
 		font-size: 1.4em;
 		color: hsla(40, 80%, 58%, 1);
 		transition: letter-spacing 0.1s cubic-bezier(0.45, 0.4, 0.55, 1.45);
 	}
 	section .skills:hover h3.stars {
-		letter-spacing: .2em;
+		letter-spacing: 0.2em;
 	}
 	section h3.stars span {
-		letter-spacing: .1em;
-		color: hsla(200, 95%, 8%, .5);
+		letter-spacing: 0.1em;
+		color: hsla(200, 95%, 8%, 0.5);
 		transition: color 0.1s ease-in-out;
 	}
 	section .skills:hover h3.stars span {
-		color: hsla(200, 95%, 8%, .2);
+		color: hsla(200, 95%, 8%, 0.2);
 	}
 
 	aside {
-		background: hsla(200, 95%, 8%, .15);
+		background: hsla(200, 95%, 8%, 0.15);
 		display: flex;
 		flex-direction: column;
 		padding: 0 3vw 3vh;
@@ -220,7 +249,7 @@
 		position: relative;
 		width: 75%;
 		margin: 2vh auto 0;
-		transition: transform .7s ease-in-out;
+		transition: transform 0.7s ease-in-out;
 		cursor: pointer;
 	}
 	aside div.profile.flipped {
@@ -236,7 +265,7 @@
 		filter: grayscale(1) contrast(1.3) brightness(0.9);
 	}
 	aside img.color {
-		transform: rotateY( 180deg );
+		transform: rotateY(180deg);
 		filter: none;
 	}
 
@@ -267,14 +296,16 @@
 	aside div.lang:hover p > span > span {
 		transform: rotateZ(-180deg);
 	}
-	
-	aside ul.cool_stuff li, aside ul.contact li {
+
+	aside ul.cool_stuff li,
+	aside ul.contact li {
 		position: relative;
 		padding-left: 2em;
 	}
 
-	aside ul.cool_stuff li:before, aside ul.contact li:before {
-		content:'';
+	aside ul.cool_stuff li:before,
+	aside ul.contact li:before {
+		content: '';
 		position: absolute;
 		display: block;
 		left: 0;
@@ -285,14 +316,28 @@
 		background-repeat: no-repeat;
 		background-position: center center;
 	}
-	aside ul.contact li.dob:before {background-image: url("/files/dob.svg");}
-	aside ul.contact li.address:before {background-image: url("/files/address.svg");}
-	aside ul.contact li.phone:before {background-image: url("/files/phone.svg");}
-	aside ul.contact li.mail:before {background-image: url("/files/mail.svg");}
-	aside ul.contact li.skype:before {background-image: url("/files/skype.svg");}
+	aside ul.contact li.dob:before {
+		background-image: url('/files/dob.svg');
+	}
+	aside ul.contact li.address:before {
+		background-image: url('/files/address.svg');
+	}
+	aside ul.contact li.phone:before {
+		background-image: url('/files/phone.svg');
+	}
+	aside ul.contact li.mail:before {
+		background-image: url('/files/mail.svg');
+	}
+	aside ul.contact li.skype:before {
+		background-image: url('/files/skype.svg');
+	}
 
-	aside ul.cool_stuff li.git:before {background-image: url("/files/git.svg");}
-	aside ul.cool_stuff li.web:before {background-image: url("/files/web.svg");}
+	aside ul.cool_stuff li.git:before {
+		background-image: url('/files/git.svg');
+	}
+	aside ul.cool_stuff li.web:before {
+		background-image: url('/files/web.svg');
+	}
 
 	@media print {
 		aside ul.contact li.dob a {
@@ -302,18 +347,18 @@
 	}
 
 	aside div.education span {
-		font-size: .8em;
+		font-size: 0.8em;
 		font-weight: bold;
 	}
-	
+
 	aside div:last-of-type {
 		margin-bottom: 2vh;
 	}
 
 	aside .date {
 		margin: auto 0 1.5vh;
-		font-size: .8em;
-		color: hsla(200, 95%, 8%, .5);
+		font-size: 0.8em;
+		color: hsla(200, 95%, 8%, 0.5);
 	}
 	aside .date span {
 		width: 25%;

@@ -3,33 +3,37 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>Jonas Brüggen | Lebenslauf</title>
-		<link rel="icon" href="files/icon_colored.ico">
+		<link rel="icon" href="files/icon_colored.ico" />
 		<meta name="author" content="www.jonas-brueggen.de" />
-		<meta name="viewport" content="width=device-width">
+		<meta name="viewport" content="width=device-width" />
 		<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.2.0/dist/confetti.browser.min.js"></script>
 		@@include('index_inline_css.html')
 	</head>
 	<body>
-		<header>
-		</header>
+		<header></header>
 		<section>
-			
 			<div class="title">
 				<h1>Jonas Brüggen</h1>
 				<span></span>
 				<h2>Web Developer</h2>
 			</div>
-			
+
 			<div class="career">
 				<h2>Berufsweg</h2>
-				
-				<h3>Seit 2011: RheinEnergie AG</h3>
-				<p>Ausbildung zum Informatiker im Rahmen eines dualen Studiums bei der RheinEnergie AG. Vollzeit angestellt seit Dezember 2014 im Bereich Prozessautomation.<br/>
-				Die RheinEnergie AG ist der Grundversorger der Stadt Köln und Umgebung mit etwa drei Millionen Kunden und 2.500 Mitarbeitern.</p>
-				<p>Schwerpunktmäßige Arbeit rund um die Software SAP-BPA, ein Automationstool für SAP und sonstige Software zur Automatisierung von Geschäftsprozessen. Linienaufgaben geprägt von Prozesskonzeption, Implementierung und Pflege. Enge Zusammenarbeit mit den Bereichen HR, Kundenabrechnung und Trading, sowie nahezu allen IT-Bereichen. Arbeit mit diversen Protokollen, zur Übersetzung und Unterstützung von verschiedenen APIs, insbesondere SAP, SEPA, FTP, SNMP, REST und SOAP.</p>
-				<p>Seit Anfang 2018: im Langzeiturlaub / ruhendes Arbeitsverhältnis (Weltreise).</p>
-				
-				<h3>Seit 2018: Selbstständigkeit als Full Stack Webentwickler</h3>
+
+				<h3>2011 - 2020: RheinEnergie AG</h3>
+				<p>
+					Ausbildung zum Informatiker im Rahmen eines dualen Studiums bei der RheinEnergie AG. Vollzeit angestellt seit Dezember 2014 im Bereich Prozessautomation.<br />
+					Die RheinEnergie AG ist der Grundversorger der Stadt Köln und Umgebung mit etwa drei Millionen Kunden und 2.500 Mitarbeitern.
+				</p>
+				<p>
+					Schwerpunktmäßige Arbeit rund um die Software SAP-BPA, ein Automationstool für SAP und sonstige Software zur Automatisierung von Geschäftsprozessen. Linienaufgaben geprägt von
+					Prozesskonzeption, Implementierung und Pflege. Enge Zusammenarbeit mit den Bereichen HR, Kundenabrechnung und Trading, sowie nahezu allen IT-Bereichen. Arbeit mit diversen
+					Protokollen, zur Übersetzung und Unterstützung von verschiedenen APIs, insbesondere SAP, SEPA, FTP, SNMP, REST und SOAP.
+				</p>
+				<p>Seit Anfang 2018: im Langzeiturlaub / ruhendes Arbeitsverhältnis, beendet zum 31.07.2020.</p>
+
+				<h3>Seit 2017: Selbstständigkeit als Webentwickler</h3>
 				<p>Erweiterung der Arbeit auf das Gebiet der Webentwicklung und Vertiefung der entsprechenden Skills.</p>
 				<p>Wichtige Aufgabenbereiche:</p>
 				<ul>
@@ -42,25 +46,27 @@
 					<li>Einsatz von Node für die Entwicklungsumgebung und gulp.js als Build-Tool, sowie GitHub zur Versionierung.</li>
 				</ul>
 			</div>
-			
 
 			<h2>Skills</h2>
-			<div class="skills">
+			<div class="skills" onclick="this.classList.toggle('info');">
 				<h3 class="stars">★★★★★</h3>
-				<p>HTML5, CSS3, SASS, JavaScript (ES6), gulp.js, Git, three.js, Pug, Java (EE), SAP-BPA, MultiCash</p>
+				<p class="info">5/5 Sternen: Die Technologien können komfortabel und ohne Nachschlagewerk eingesetzt werden.</p>
+				<p>HTML5, CSS3, SASS, gulp.js, Git, three.js, Java (EE), SAP-BPA, MultiCash</p>
 			</div>
-			<div class="skills">
+			<div class="skills" onclick="this.classList.toggle('info');">
 				<h3 class="stars">★★★★<span>★</span></h3>
-				<p>jQuery, Node.js, SQL (insb. MySQL, SQLite, MS SQL, Oracle), C++</p>
+				<p class="info">4/5 Sternen: Die entsprechende Dokumentation sollte nebenbei offen sein, um ordentliche Ergebnisse zu erzielen.</p>
+				<p>Material Design, JavaScript (ES6), jQuery, Node.js, Pug, SQL (insb. MySQL, SQLite, MS SQL, Oracle), C++</p>
 			</div>
-			<div class="skills">
+			<div class="skills" onclick="this.classList.toggle('info');">
 				<h3 class="stars">★★★<span>★★</span></h3>
-				<p>AngularJS, PHP, SVN, TypeScript, LDAP, SharePoint/VB</p>
+				<p class="info">3/5 Sternen: Google und Stackoverflow sind während der Entwicklung in starker Benutzung.</p>
+				<p>Gridsome, VueJS, Vuetify, AngularJS, PHP, SVN, TypeScript, LDAP, SharePoint/VB</p>
 			</div>
-			
+
 			<h2>Relevante Interessen</h2>
 			<p>Layouting, UX-Design, Open Source, SEO, VR, AR, Crypto & Sicherheit</p>
-			
+
 			<h2>Außerhalb der Arbeit</h2>
 			<h3>2010 - 2018: Pfadfinder in Köln</h3>
 			<p>Jugendgruppenleiter (6 Jahre), Geschäftsführer (4 Jahre), Webmaster (7 Jahre), Projektleitung bei Großveranstaltungen.</p>
@@ -71,14 +77,16 @@
 		</section>
 		<aside>
 			<div class="profile" onclick="this.classList.toggle('flipped');">
-				<img class="color" src="files/cv-profil.png" alt="profilbild bunt"/>
-				<img src="files/cv-profil.png" alt="profilbild bw"/>
+				<img class="color" src="files/cv-profil.png" alt="profilbild bunt" />
+				<img src="files/cv-profil.png" alt="profilbild bw" />
 			</div>
 
 			<div>
 				<h2>Kontakt & Daten</h2>
 				<ul class="contact">
-					<li class="dob"><a onclick="
+					<li class="dob">
+						<a
+							onclick="
 confetti({
 	particleCount: 15,
 	spread: 26,
@@ -90,14 +98,19 @@ confetti({
 		x: (document.querySelector('.dob').getBoundingClientRect().x + 23)/window.innerWidth,
 		y: (document.querySelector('.dob').getBoundingClientRect().y + 10)/window.innerHeight
 	}
-});">04. Oktober '91</a></li>
-					<li class="address"><a href="https://g.page/jb-dev" target="_blank">Darmstädter Str. 4<br />D-50678 Köln</a></li>
+});"
+							>04. Oktober '91</a
+						>
+					</li>
+					<li class="address">
+						<a href="https://g.page/jb-dev" target="_blank">Darmstädter Str. 4<br />D-50678 Köln</a>
+					</li>
 					<li class="phone"><a href="tel:+4915759073485">+49 1575 907 3485</a></li>
 					<li class="mail"><a href="mailto:mail@jonas-brueggen.de" target="_blank">mail@jonas-brueggen.de</a></li>
 					<li class="skype"><a href="skype:live:.cid.8ae6d35bd6d72767">skype@jonas-brueggen.de</a></li>
 				</ul>
 			</div>
-			
+
 			<div class="education">
 				<h2>Bildungsweg</h2>
 				<h3>Ausbildung</h3>
@@ -105,12 +118,14 @@ confetti({
 				<h3>Studium</h3>
 				<p>B. Sc. Wirtschaftsinformatik / IT-Consulting<br /><span>2014, Bergisch-Gladbach</span></p>
 			</div>
-			
+
 			<div class="lang">
 				<h2>Sprachen</h2>
-				<p>Bilingual, <span><span>Deutsch</span> <span>und</span> <span>Englisch</span></span></p>
+				<p>
+					Bilingual, <span><span>Deutsch</span> <span>und</span> <span>Englisch</span></span>
+				</p>
 			</div>
-			
+
 			<div>
 				<h2>Portfolio</h2>
 				<ul class="cool_stuff">
@@ -118,7 +133,7 @@ confetti({
 					<li class="git"><a href="https://github.com/ZipJo" target="_blank">github.com/ZipJo</a></li>
 				</ul>
 			</div>
-			
+
 			<div>
 				<h2>Referenzen</h2>
 				<ul>
@@ -127,7 +142,7 @@ confetti({
 				</ul>
 			</div>
 
-			<h4 class="date">Zuletzt aktualisiert:<span></span>06.07.2020</h4>
+			<h4 class="date">Zuletzt aktualisiert:<span></span>22.07.2020</h4>
 		</aside>
 	</body>
 </html>

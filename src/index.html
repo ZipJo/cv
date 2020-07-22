@@ -3,29 +3,23 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>Jonas Brüggen | Lebenslauf</title>
-		<link rel="icon" href="files/icon_colored.ico">
+		<link rel="icon" href="files/icon_colored.ico" />
 		<meta name="author" content="www.jonas-brueggen.de" />
-		<meta name="viewport" content="width=device-width">
+		<meta name="viewport" content="width=device-width" />
 		<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.2.0/dist/confetti.browser.min.js"></script>
 		<style>
 	@font-face {
-		font-family: "Montserrat";
+		font-family: 'Montserrat';
 
-		src: local('Montserrat'),
-			url("/files/montserrat-regular.woff2") format("woff2"),
-			url("/files/montserrat-regular.woff") format("woff"),
-			url("/files/montserrat-regular.ttf") format("truetype");
+		src: local('Montserrat'), url('/files/montserrat-regular.woff2') format('woff2'), url('/files/montserrat-regular.woff') format('woff'), url('/files/montserrat-regular.ttf') format('truetype');
 		font-weight: normal;
 		font-style: normal;
 		font-display: swap;
 	}
 	@font-face {
-		font-family: "Montserrat";
+		font-family: 'Montserrat';
 
-		src: local('Montserrat'),
-			url("/files/montserrat-bold.woff2") format("woff2"),
-			url("/files/montserrat-bold.woff") format("woff"),
-			url("/files/montserrat-bold.ttf") format("truetype");
+		src: local('Montserrat'), url('/files/montserrat-bold.woff2') format('woff2'), url('/files/montserrat-bold.woff') format('woff'), url('/files/montserrat-bold.ttf') format('truetype');
 		font-weight: bold;
 		font-style: normal;
 		font-display: swap;
@@ -37,14 +31,22 @@
 	}
 
 	@media screen {
-		.only_screen { display: block; }
-		.only_print { display: none; }
+		.only_screen {
+			display: block;
+		}
+		.only_print {
+			display: none;
+		}
 	}
 	@media print {
-		.only_screen { display: none; }
-		.only_print { display: block; }
+		.only_screen {
+			display: none;
+		}
+		.only_print {
+			display: block;
+		}
 	}
-	
+
 	body {
 		min-height: 100vh;
 		width: 100vw;
@@ -71,30 +73,35 @@
 		background: hsla(200, 95%, 15%, 1);
 	}
 
-	h1, h2, h3 {
+	h1,
+	h2,
+	h3 {
 		text-transform: uppercase;
 		letter-spacing: 0.08em;
 		font-weight: normal;
 	}
-	
-	a, a:visited, a:hover {
+
+	a,
+	a:visited,
+	a:hover {
 		color: hsla(185, 95%, 33%, 1);
 		text-decoration: none;
 		position: relative;
 		cursor: pointer;
+		display: inline-block;
 	}
 	a:after {
 		content: '';
 		width: 0%;
-		position:absolute;
+		position: absolute;
 		display: block;
 		bottom: -5px;
 		right: 0;
 		background: hsla(185, 95%, 33%, 1);
 		height: 1px;
-		transition: width .2s ease-in-out;
+		transition: width 0.2s ease-in-out;
 	}
-	
+
 	@media print {
 		a:after {
 			content: unset;
@@ -106,7 +113,6 @@
 		left: 0;
 	}
 
-
 	h2 {
 		font-size: 1.6em;
 		font-weight: bold;
@@ -115,17 +121,18 @@
 
 	@media print {
 		h2 {
-			margin-top: .9em;
+			margin-top: 0.9em;
 		}
 	}
 
 	h3 {
 		font-size: 1.3em;
-		margin-top: .9em;
+		margin-top: 0.9em;
 		line-height: 1.2em;
 	}
 
-	p, li {
+	p,
+	li {
 		margin-top: 0.6em;
 		line-height: 1.5em;
 	}
@@ -158,7 +165,8 @@
 		line-height: 1.4em;
 		font-weight: normal;
 	}
-	section .title h1, .title h2 {
+	section .title h1,
+	.title h2 {
 		margin: 0;
 	}
 	section .title span {
@@ -175,27 +183,48 @@
 		margin-left: 1em;
 	}
 
+	section .skills:hover {
+		cursor: pointer;
+	}
+	section .skills .info {
+		visibility: hidden;
+		display: block;
+		max-height: 0;
+		opacity: 0;
+		overflow-y: hidden;
+		transition: all 0.2s ease-in-out;
+		box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+		margin: 0em 1.5em;
+		padding: 0em 1em;
+	}
+	section .skills.info .info {
+		visibility: visible;
+		max-height: 3em;
+		margin: 0.5em 1.5em;
+		padding: 0.8em 1em;
+		opacity: 1;
+	}
 	section h3.stars {
-		margin-top: .7em;
-		letter-spacing: .1em;
+		margin-top: 0.7em;
+		letter-spacing: 0.1em;
 		font-size: 1.4em;
 		color: hsla(40, 80%, 58%, 1);
 		transition: letter-spacing 0.1s cubic-bezier(0.45, 0.4, 0.55, 1.45);
 	}
 	section .skills:hover h3.stars {
-		letter-spacing: .2em;
+		letter-spacing: 0.2em;
 	}
 	section h3.stars span {
-		letter-spacing: .1em;
-		color: hsla(200, 95%, 8%, .5);
+		letter-spacing: 0.1em;
+		color: hsla(200, 95%, 8%, 0.5);
 		transition: color 0.1s ease-in-out;
 	}
 	section .skills:hover h3.stars span {
-		color: hsla(200, 95%, 8%, .2);
+		color: hsla(200, 95%, 8%, 0.2);
 	}
 
 	aside {
-		background: hsla(200, 95%, 8%, .15);
+		background: hsla(200, 95%, 8%, 0.15);
 		display: flex;
 		flex-direction: column;
 		padding: 0 3vw 3vh;
@@ -229,7 +258,7 @@
 		position: relative;
 		width: 75%;
 		margin: 2vh auto 0;
-		transition: transform .7s ease-in-out;
+		transition: transform 0.7s ease-in-out;
 		cursor: pointer;
 	}
 	aside div.profile.flipped {
@@ -245,7 +274,7 @@
 		filter: grayscale(1) contrast(1.3) brightness(0.9);
 	}
 	aside img.color {
-		transform: rotateY( 180deg );
+		transform: rotateY(180deg);
 		filter: none;
 	}
 
@@ -276,14 +305,16 @@
 	aside div.lang:hover p > span > span {
 		transform: rotateZ(-180deg);
 	}
-	
-	aside ul.cool_stuff li, aside ul.contact li {
+
+	aside ul.cool_stuff li,
+	aside ul.contact li {
 		position: relative;
 		padding-left: 2em;
 	}
 
-	aside ul.cool_stuff li:before, aside ul.contact li:before {
-		content:'';
+	aside ul.cool_stuff li:before,
+	aside ul.contact li:before {
+		content: '';
 		position: absolute;
 		display: block;
 		left: 0;
@@ -294,14 +325,28 @@
 		background-repeat: no-repeat;
 		background-position: center center;
 	}
-	aside ul.contact li.dob:before {background-image: url("/files/dob.svg");}
-	aside ul.contact li.address:before {background-image: url("/files/address.svg");}
-	aside ul.contact li.phone:before {background-image: url("/files/phone.svg");}
-	aside ul.contact li.mail:before {background-image: url("/files/mail.svg");}
-	aside ul.contact li.skype:before {background-image: url("/files/skype.svg");}
+	aside ul.contact li.dob:before {
+		background-image: url('/files/dob.svg');
+	}
+	aside ul.contact li.address:before {
+		background-image: url('/files/address.svg');
+	}
+	aside ul.contact li.phone:before {
+		background-image: url('/files/phone.svg');
+	}
+	aside ul.contact li.mail:before {
+		background-image: url('/files/mail.svg');
+	}
+	aside ul.contact li.skype:before {
+		background-image: url('/files/skype.svg');
+	}
 
-	aside ul.cool_stuff li.git:before {background-image: url("/files/git.svg");}
-	aside ul.cool_stuff li.web:before {background-image: url("/files/web.svg");}
+	aside ul.cool_stuff li.git:before {
+		background-image: url('/files/git.svg');
+	}
+	aside ul.cool_stuff li.web:before {
+		background-image: url('/files/web.svg');
+	}
 
 	@media print {
 		aside ul.contact li.dob a {
@@ -311,46 +356,51 @@
 	}
 
 	aside div.education span {
-		font-size: .8em;
+		font-size: 0.8em;
 		font-weight: bold;
 	}
-	
+
 	aside div:last-of-type {
 		margin-bottom: 2vh;
 	}
 
 	aside .date {
 		margin: auto 0 1.5vh;
-		font-size: .8em;
-		color: hsla(200, 95%, 8%, .5);
+		font-size: 0.8em;
+		color: hsla(200, 95%, 8%, 0.5);
 	}
 	aside .date span {
 		width: 25%;
 		display: inline-block;
 	}
 </style>
+
 	</head>
 	<body>
-		<header>
-		</header>
+		<header></header>
 		<section>
-			
 			<div class="title">
 				<h1>Jonas Brüggen</h1>
 				<span></span>
 				<h2>Web Developer</h2>
 			</div>
-			
+
 			<div class="career">
 				<h2>Berufsweg</h2>
-				
-				<h3>Seit 2011: RheinEnergie AG</h3>
-				<p>Ausbildung zum Informatiker im Rahmen eines dualen Studiums bei der RheinEnergie AG. Vollzeit angestellt seit Dezember 2014 im Bereich Prozessautomation.<br/>
-				Die RheinEnergie AG ist der Grundversorger der Stadt Köln und Umgebung mit etwa drei Millionen Kunden und 2.500 Mitarbeitern.</p>
-				<p>Schwerpunktmäßige Arbeit rund um die Software SAP-BPA, ein Automationstool für SAP und sonstige Software zur Automatisierung von Geschäftsprozessen. Linienaufgaben geprägt von Prozesskonzeption, Implementierung und Pflege. Enge Zusammenarbeit mit den Bereichen HR, Kundenabrechnung und Trading, sowie nahezu allen IT-Bereichen. Arbeit mit diversen Protokollen, zur Übersetzung und Unterstützung von verschiedenen APIs, insbesondere SAP, SEPA, FTP, SNMP, REST und SOAP.</p>
-				<p>Seit Anfang 2018: im Langzeiturlaub / ruhendes Arbeitsverhältnis (Weltreise).</p>
-				
-				<h3>Seit 2018: Selbstständigkeit als Full Stack Webentwickler</h3>
+
+				<h3>2011 - 2020: RheinEnergie AG</h3>
+				<p>
+					Ausbildung zum Informatiker im Rahmen eines dualen Studiums bei der RheinEnergie AG. Vollzeit angestellt seit Dezember 2014 im Bereich Prozessautomation.<br />
+					Die RheinEnergie AG ist der Grundversorger der Stadt Köln und Umgebung mit etwa drei Millionen Kunden und 2.500 Mitarbeitern.
+				</p>
+				<p>
+					Schwerpunktmäßige Arbeit rund um die Software SAP-BPA, ein Automationstool für SAP und sonstige Software zur Automatisierung von Geschäftsprozessen. Linienaufgaben geprägt von
+					Prozesskonzeption, Implementierung und Pflege. Enge Zusammenarbeit mit den Bereichen HR, Kundenabrechnung und Trading, sowie nahezu allen IT-Bereichen. Arbeit mit diversen
+					Protokollen, zur Übersetzung und Unterstützung von verschiedenen APIs, insbesondere SAP, SEPA, FTP, SNMP, REST und SOAP.
+				</p>
+				<p>Seit Anfang 2018: im Langzeiturlaub / ruhendes Arbeitsverhältnis, beendet zum 31.07.2020.</p>
+
+				<h3>Seit 2017: Selbstständigkeit als Webentwickler</h3>
 				<p>Erweiterung der Arbeit auf das Gebiet der Webentwicklung und Vertiefung der entsprechenden Skills.</p>
 				<p>Wichtige Aufgabenbereiche:</p>
 				<ul>
@@ -363,25 +413,27 @@
 					<li>Einsatz von Node für die Entwicklungsumgebung und gulp.js als Build-Tool, sowie GitHub zur Versionierung.</li>
 				</ul>
 			</div>
-			
 
 			<h2>Skills</h2>
-			<div class="skills">
+			<div class="skills" onclick="this.classList.toggle('info');">
 				<h3 class="stars">★★★★★</h3>
-				<p>HTML5, CSS3, SASS, JavaScript (ES6), gulp.js, Git, three.js, Pug, Java (EE), SAP-BPA, MultiCash</p>
+				<p class="info">5/5 Sternen: Die Technologien können komfortabel und ohne Nachschlagewerk eingesetzt werden.</p>
+				<p>HTML5, CSS3, SASS, gulp.js, Git, three.js, Java (EE), SAP-BPA, MultiCash</p>
 			</div>
-			<div class="skills">
+			<div class="skills" onclick="this.classList.toggle('info');">
 				<h3 class="stars">★★★★<span>★</span></h3>
-				<p>jQuery, Node.js, SQL (insb. MySQL, SQLite, MS SQL, Oracle), C++</p>
+				<p class="info">4/5 Sternen: Die entsprechende Dokumentation sollte nebenbei offen sein, um ordentliche Ergebnisse zu erzielen.</p>
+				<p>Material Design, JavaScript (ES6), jQuery, Node.js, Pug, SQL (insb. MySQL, SQLite, MS SQL, Oracle), C++</p>
 			</div>
-			<div class="skills">
+			<div class="skills" onclick="this.classList.toggle('info');">
 				<h3 class="stars">★★★<span>★★</span></h3>
-				<p>AngularJS, PHP, SVN, TypeScript, LDAP, SharePoint/VB</p>
+				<p class="info">3/5 Sternen: Google und Stackoverflow sind während der Entwicklung in starker Benutzung.</p>
+				<p>Gridsome, VueJS, Vuetify, AngularJS, PHP, SVN, TypeScript, LDAP, SharePoint/VB</p>
 			</div>
-			
+
 			<h2>Relevante Interessen</h2>
 			<p>Layouting, UX-Design, Open Source, SEO, VR, AR, Crypto & Sicherheit</p>
-			
+
 			<h2>Außerhalb der Arbeit</h2>
 			<h3>2010 - 2018: Pfadfinder in Köln</h3>
 			<p>Jugendgruppenleiter (6 Jahre), Geschäftsführer (4 Jahre), Webmaster (7 Jahre), Projektleitung bei Großveranstaltungen.</p>
@@ -392,14 +444,16 @@
 		</section>
 		<aside>
 			<div class="profile" onclick="this.classList.toggle('flipped');">
-				<img class="color" src="files/cv-profil.png" alt="profilbild bunt"/>
-				<img src="files/cv-profil.png" alt="profilbild bw"/>
+				<img class="color" src="files/cv-profil.png" alt="profilbild bunt" />
+				<img src="files/cv-profil.png" alt="profilbild bw" />
 			</div>
 
 			<div>
 				<h2>Kontakt & Daten</h2>
 				<ul class="contact">
-					<li class="dob"><a onclick="
+					<li class="dob">
+						<a
+							onclick="
 confetti({
 	particleCount: 15,
 	spread: 26,
@@ -411,14 +465,19 @@ confetti({
 		x: (document.querySelector('.dob').getBoundingClientRect().x + 23)/window.innerWidth,
 		y: (document.querySelector('.dob').getBoundingClientRect().y + 10)/window.innerHeight
 	}
-});">04. Oktober '91</a></li>
-					<li class="address"><a href="https://g.page/jb-dev" target="_blank">Darmstädter Str. 4<br />D-50678 Köln</a></li>
+});"
+							>04. Oktober '91</a
+						>
+					</li>
+					<li class="address">
+						<a href="https://g.page/jb-dev" target="_blank">Darmstädter Str. 4<br />D-50678 Köln</a>
+					</li>
 					<li class="phone"><a href="tel:+4915759073485">+49 1575 907 3485</a></li>
 					<li class="mail"><a href="mailto:mail@jonas-brueggen.de" target="_blank">mail@jonas-brueggen.de</a></li>
 					<li class="skype"><a href="skype:live:.cid.8ae6d35bd6d72767">skype@jonas-brueggen.de</a></li>
 				</ul>
 			</div>
-			
+
 			<div class="education">
 				<h2>Bildungsweg</h2>
 				<h3>Ausbildung</h3>
@@ -426,12 +485,14 @@ confetti({
 				<h3>Studium</h3>
 				<p>B. Sc. Wirtschaftsinformatik / IT-Consulting<br /><span>2014, Bergisch-Gladbach</span></p>
 			</div>
-			
+
 			<div class="lang">
 				<h2>Sprachen</h2>
-				<p>Bilingual, <span><span>Deutsch</span> <span>und</span> <span>Englisch</span></span></p>
+				<p>
+					Bilingual, <span><span>Deutsch</span> <span>und</span> <span>Englisch</span></span>
+				</p>
 			</div>
-			
+
 			<div>
 				<h2>Portfolio</h2>
 				<ul class="cool_stuff">
@@ -439,7 +500,7 @@ confetti({
 					<li class="git"><a href="https://github.com/ZipJo" target="_blank">github.com/ZipJo</a></li>
 				</ul>
 			</div>
-			
+
 			<div>
 				<h2>Referenzen</h2>
 				<ul>
