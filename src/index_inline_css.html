@@ -44,7 +44,7 @@
 		background: transparent;
 		display: grid;
 		grid-template-columns: 2fr 1fr;
-		grid-template-rows: 3vh auto;
+		grid-template-rows: 5vh auto;
 		font-family: 'Montserrat', sans-serif;
 		letter-spacing: 0.025em;
 		color: hsla(200, 95%, 8%, 1);
@@ -55,6 +55,7 @@
 	@media print {
 		body {
 			font-size: 7pt;
+			grid-template-rows: 3vh auto;
 		}
 	}
 
@@ -62,6 +63,28 @@
 		display: block;
 		grid-column: span 2;
 		background: hsla(200, 95%, 15%, 1);
+	}
+
+	header nav ul {
+		display: flex;
+		flex-direction: row;
+		margin: 0 5em;
+		list-style-type: none;
+		align-items: center;
+		height: 5vh;
+	}
+
+	header nav ul li {
+		margin: 0 0.5em;
+	}
+
+	header nav ul li a:after {
+		bottom: 1px;
+	}
+	@media print {
+		header nav {
+			display: none;
+		}
 	}
 
 	h1,
@@ -93,13 +116,18 @@
 		transition: width 0.2s ease-in-out;
 	}
 
+	a.active {
+		pointer-events: none;
+	}
+
 	@media print {
 		a:after {
 			content: unset;
 		}
 	}
 
-	a:hover:after {
+	a:hover:after,
+	a.active:after {
 		width: 100%;
 		left: 0;
 	}
@@ -298,13 +326,13 @@
 	}
 
 	aside ul.cool_stuff li,
-	aside ul.contact li {
+	aside .contact ul li {
 		position: relative;
 		padding-left: 2em;
 	}
 
 	aside ul.cool_stuff li:before,
-	aside ul.contact li:before {
+	aside .contact ul li:before {
 		content: '';
 		position: absolute;
 		display: block;
@@ -316,19 +344,19 @@
 		background-repeat: no-repeat;
 		background-position: center center;
 	}
-	aside ul.contact li.dob:before {
+	aside .contact ul li.dob:before {
 		background-image: url('/files/dob.svg');
 	}
-	aside ul.contact li.address:before {
+	aside .contact ul li.address:before {
 		background-image: url('/files/address.svg');
 	}
-	aside ul.contact li.phone:before {
+	aside .contact ul li.phone:before {
 		background-image: url('/files/phone.svg');
 	}
-	aside ul.contact li.mail:before {
+	aside .contact ul li.mail:before {
 		background-image: url('/files/mail.svg');
 	}
-	aside ul.contact li.skype:before {
+	aside .contact ul li.skype:before {
 		background-image: url('/files/skype.svg');
 	}
 
@@ -340,7 +368,7 @@
 	}
 
 	@media print {
-		aside ul.contact li.dob a {
+		aside .contact ul li.dob a {
 			color: hsla(200, 95%, 8%, 1);
 			cursor: default;
 		}
