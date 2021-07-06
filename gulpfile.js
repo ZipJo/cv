@@ -3,7 +3,7 @@
 /* ################ */
 
 const gulp = require('gulp');
-const browserSync = require('browser-sync');
+const browserSync = require('browser-sync').create();
 const connect = require('gulp-connect-php');
 const rename = require('gulp-rename');
 const filter = require('gulp-ignore');
@@ -41,12 +41,12 @@ gulp.task('fileinclude', function () {
 gulp.task('serve', function () {
 	connect.server(
 		{
-			base: developmentFolder,
+			baseDir: developmentFolder,
 			port: 4000,
 			stdio: 'ignore',
 		},
 		function () {
-			browserSync({
+			browserSync.init({
 				proxy: 'localhost:4000',
 			});
 		}

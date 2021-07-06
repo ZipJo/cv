@@ -1,5 +1,5 @@
 {
-  "name": "CV",
+  "name": "cv",
   "version": "1.0.0",
   "description": "it's ma CV",
   "main": "index.js",
@@ -7,16 +7,15 @@
     "start": "gulp dev",
     "build": "gulp build",
     "upload": "gulp sftp",
-    "bnd": "gulp build-sftp",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "bnd": "gulp build-sftp"
   },
-  "author": "www.jonas-brueggen.de",
+  "author": "@ZipJo",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.27.4",
     "gulp": "^4.0.2",
     "gulp-connect-php": "^1.0.3",
-    "gulp-file-include": "^2.2.2",
+    "gulp-file-include": "^2.3.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-ignore": "^3.0.0",
     "gulp-minify-inline": "^1.1.0",

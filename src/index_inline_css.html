@@ -202,46 +202,6 @@
 		margin-left: 1em;
 	}
 
-	section .skills:hover {
-		cursor: pointer;
-	}
-	section .skills .info {
-		visibility: hidden;
-		display: block;
-		max-height: 0;
-		opacity: 0;
-		overflow-y: hidden;
-		transition: all 0.2s ease-in-out;
-		box-shadow: 2px 2px 5px 0px hsla(0, 0%, 0%, 0.2);
-		margin: 0em 1.5em;
-		padding: 0em 1em;
-	}
-	section .skills.info .info {
-		visibility: visible;
-		max-height: 3em;
-		margin: 0.5em 1.5em;
-		padding: 0.8em 1em;
-		opacity: 1;
-	}
-	section h3.stars {
-		margin-top: 0.7em;
-		letter-spacing: 0.1em;
-		font-size: 1.4em;
-		color: hsla(40, 80%, 58%, 1);
-		transition: letter-spacing 0.1s cubic-bezier(0.45, 0.4, 0.55, 1.45);
-	}
-	section .skills:hover h3.stars {
-		letter-spacing: 0.2em;
-	}
-	section h3.stars span {
-		letter-spacing: 0.1em;
-		color: hsla(200, 95%, 8%, 0.5);
-		transition: color 0.1s ease-in-out;
-	}
-	section .skills:hover h3.stars span {
-		color: hsla(200, 95%, 8%, 0.2);
-	}
-
 	aside {
 		background: hsla(200, 95%, 8%, 0.15);
 		display: flex;
@@ -279,9 +239,6 @@
 		margin: 2vh auto 0;
 		transition: transform 0.7s ease-in-out;
 		cursor: pointer;
-	}
-	aside div.profile.flipped {
-		transform: translateX(-65%) rotateY(-180deg);
 	}
 
 	aside img {
