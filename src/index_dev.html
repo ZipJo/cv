@@ -48,7 +48,19 @@
 		</section>
 		<aside>
 			<div class="profile">
-				<img src="files/cv-profil.png" alt="profilbild bw" />
+				<img src="files/cv-profil.png" alt="profilbild bw" onclick="
+				confetti({
+					particleCount: 15,
+					spread: 26,
+					angle: 50,
+					startVelocity: 12,
+					decay: 0.92,
+					ticks: 100,
+					origin: {
+						x: (document.querySelector('.dob').getBoundingClientRect().x + 23)/window.innerWidth,
+						y: (document.querySelector('.dob').getBoundingClientRect().y + 10)/window.innerHeight
+					}
+				});"/>
 			</div>
 
 			<div class="contact">
@@ -88,13 +100,13 @@ confetti({
 				<p></p>
 			</div>
 
-			<div class="portfolio">
+			<!-- <div class="portfolio">
 				<h2></h2>
 				<ul class="cool_stuff">
 					<li class="web"><a href="https://jonas-brueggen.de" target="_blank">jonas-brueggen.de</a></li>
 					<li class="git"><a href="https://github.com/ZipJo" target="_blank">github.com/ZipJo</a></li>
 				</ul>
-			</div>
+			</div> -->
 
 			<div class="references">
 				<h2></h2>

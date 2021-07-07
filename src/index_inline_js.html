@@ -73,7 +73,7 @@
 						Etablieren von internen Prozessen zur Qualittssicherung, insb. im Rahmen von Git und Testing.<br />
 						Konzeption und Umsetzung von Barrierefreiheit auf der B2B Anwendung, Technische Untersützung für Marketing</p>`,
 					en: `
-	                <p>Senior React frontend engineer with focus on a variety of topics regarding cyber security awareness training</p>
+	                <p>Senior React frontend engineer with focus on a variety of topics regarding cyber security awareness training.</p>
 					<p>Working with React + TypeScript, filling our design departments' ideas with life. Heavy focus on training our junior developers, mentoring and code reviews.<br />
 						Establishing internal QA-processes, especially regarding git and testing.<br />
 						Conceptualizing and implementation of accessibility for our b2b-app, technical support for marketing</p>`,
@@ -223,12 +223,12 @@
 	document.querySelector('.title h2').innerHTML = content.subtitle[lang];
 
 	document.querySelector('.career h2').innerHTML = content.career.title[lang];
-	document.querySelectorAll('.career h3')[0].innerHTML = content.career.career1.title[lang];
-	document.querySelectorAll('.career h3')[0].outerHTML += content.career.career1.html[lang];
+	document.querySelectorAll('.career h3')[0].innerHTML = content.career.career3.title[lang];
+	document.querySelectorAll('.career h3')[0].outerHTML += content.career.career3.html[lang];
 	document.querySelectorAll('.career h3')[1].innerHTML = content.career.career2.title[lang];
 	document.querySelectorAll('.career h3')[1].outerHTML += content.career.career2.html[lang];
-	document.querySelectorAll('.career h3')[2].innerHTML = content.career.career3.title[lang];
-	document.querySelectorAll('.career h3')[2].outerHTML += content.career.career3.html[lang];
+	document.querySelectorAll('.career h3')[2].innerHTML = content.career.career1.title[lang];
+	document.querySelectorAll('.career h3')[2].outerHTML += content.career.career1.html[lang];
 
 	document.querySelectorAll('.skills .heading')[0].innerHTML = content.skills.great_at.title[lang];
 	document.querySelectorAll('.skills .text')[0].innerHTML = content.skills.great_at.text[lang];
@@ -248,7 +248,7 @@
 	document.querySelector('.lang h2').innerHTML = aside.language.title[lang];
 	document.querySelector('.lang p').innerHTML = aside.language.html[lang];
 
-	document.querySelector('.portfolio h2').innerHTML = aside.portfolio.title[lang];
+	//document.querySelector('.portfolio h2').innerHTML = aside.portfolio.title[lang];
 
 	document.querySelector('.references h2').innerHTML = aside.ref.title[lang];
 	document.querySelector('.references ul').innerHTML = aside.ref.html[lang];
