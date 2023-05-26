@@ -1,0 +1,307 @@
+{
+  "content": {
+    "subtitle": {
+      "de": "Entwickler",
+      "en": "Developer"
+    },
+    "shortbio": [
+      {
+        "de": "Großartig rund um Code, Kaffee, Klettern und Kochen!",
+        "en": "Great with code, coffee, climbing and cooking!"
+      },
+      {
+        "de": "Zurzeit beschäftigt mit einer bunten Mischung aus Feature Driven Development, Refactoring & Dokumentation und Mentoring unserer Junior-Entwickler.",
+        "en": "Currently doing a colorful mix of feature-driven development, refactoring & documentation and mentoring our junior devs."
+      },
+      {
+        "de": "Gummienten sind das Werkzeug meiner Wahl zur Fehlerbehebung.",
+        "en": "Rubber ducks are my favorite debugging tool of choice."
+      },
+      {
+        "de": "Weitreichende Kenntnisse in Sachen Barrierefreiheit und Legacy-Browser.",
+        "en": "Fairly deep knowledge of all things accessibility and legacy browsers."
+      },
+      {
+        "de": "Am komfortabelsten mit HTML/CSS/JS, aber am liebsten unterwegs mit React+TypeScript und einer guten Portion Git und Node.",
+        "en": "Most comfortable with vanilla HTML/CSS/JS, but loves to work in React+TypeScript, with a healthy dose of git and node."
+      }
+    ],
+    "career": {
+      "title": {
+        "de": "Berufsweg",
+        "en": "Career"
+      },
+      "careers": [
+        {
+          "title": {
+            "de": "Seit Januar 2022: IKOR Gmbh",
+            "en": "From January 2022: IKOR Gmbh"
+          },
+          "content": {
+            "summary": {
+              "de": "Senior Frontend Engineer im Projektgeschäft.",
+              "en": "Senior frontend engineer working in business projects."
+            },
+            "subtitle": {
+              "de": "Projektauszug",
+              "en": "Projects (selection)"
+            },
+            "text": [
+              {
+                "de": "Frontend-Lead für das Aufnahmeprogramm der Bundesregierung für Menschen aus Afghanistan in Kooperation mit dem AA und BMI. Das Projekt umfasst eine registrierungspflichtige, mehrsprachige Portallösung, in der hochsensible Daten erfasst und gespeichert werden.",
+                "en": "Frontend lead for the German government's admission program for people from Afghanistan, in cooperation with the AA and BMI. The project includes a registration-required, multilingual portal solution in which highly sensitive data is collected and stored."
+              },
+              {
+                "de": "Neben der Anwendungsentwicklung des Frontends, des BFFs und Teilen des Backends ging es auch um die Koordination der Frontend Entwickler:innen, um übergreifende Beratung von und mit Architektur, Kunde, Backend-/DevOps-Leads, sowie die Arbeit an sicherheitskritischen Komponenten (Verschlüsselung, Hashing, Signierungen)",
+                "en": "In addition to the application development of the frontend, the BFF and parts of the backend, this also involved the coordination of the frontend developers, overall consulting from and with architecture, client, backend/DevOps leads, as well as working on security critical components (encryption, hashing, signatures)."
+              },
+              {
+                "de": "Tech-Lead für eine neue Vertriebsplattform der NordLB, zur kategorischen Bewertung und Ausplatzierung von Großkrediten. Die Plattform ermöglicht es, die Investitionskriterien der Investoren abzugleichen und alle in einer Pipeline befindlichen Deals aus einem internen Origination-Programm zu bearbeiten und aufzubereiten.",
+                "en": "Tech lead for a new NordLB sales platform, for categorical evaluation and outplacement of high-value credits. The platform enables the matching of investors' investment criteria and the processing and preparation of all deals in a pipeline from an internal origination program."
+              },
+              {
+                "de": "Als Tech-Lead geht es neben der Anwendungsentwicklung vor allem um das Übersetzen der fachlichen Anforderungen in technische Anforderungen, um Zeit-, Kapazitäten- und Aufgabenplanung sowie um das Anlegen von technischer Dokumentation mit ADRs und um Unterstützung bei der Einrichtung der Anwendung in dem Kundensystem.",
+                "en": "As Tech Lead, in addition to application development, the primary responsibilities are translating business requirements into technical requirements, time, capacity and task planning, as well as creating technical documentation with ADRs and assisting in setting up the application in the client's system."
+              },
+              {
+                "de": "Tech-Lead für die Umsetzung eines Online-Antrags für Corona-Hilfsmaßnahmen einer Bremer Förderbank. Umgesetzt wurde die komplette Antragsstrecke mit mehreren Ebenen von Plausibilitätsprüfungen sowie der Anbindung an das Bank-interne SAP-System zur internen Weiterverarbeitung.",
+                "en": "Tech lead for the implementation of an online application for Corona aid measures at a development bank in Bremen. The complete application process was implemented with several levels of plausibility checks, as well as the connection to the bank's internal SAP system for further internal processing."
+              },
+              {
+                "de": "Neben der Entwicklung am Frontend und Backend lag der Fokus in diesem Projekt vor allem beim Release & Rollout Management, so wie der strukturierten und stark involvierten Kapazitätenplanung und Aufgabenverteilung der im Projekt beteiligten Entwickler.",
+                "en": "In addition to the development of the frontend and backend, the focus of this project was on the release and rollout management, as well as the structured and highly involved capacity planning and task distribution of the developers involved in the project."
+              }
+            ]
+          }
+        },
+        {
+          "title": {
+            "de": "2020-2021: SoSafe Gmbh",
+            "en": "2020-2021: SoSafe Gmbh"
+          },
+          "content": {
+            "summary": {
+              "de": "Senior Frontend-Lead Entwickler mit Fokus auf verschiedene Bereiche im Rahmen von IT-Sicherheitsschulungen.",
+              "en": "Senior frontend lead developer with focus on a variety of topics regarding cybersecurity awareness training."
+            },
+            "text": [
+              {
+                "de": "Arbeit mit React + Typescript, zum präzisen Umsetzen verschiedener Designs. Starker Fokus auf das Training von Junioren, Mentoring und Code-reviews.",
+                "en": "Working with React + TypeScript, filling our design departments' ideas with life. Heavy focus on training our junior developers, mentoring and code reviews."
+              },
+              {
+                "de": "Etablieren von internen Prozessen zur Qualitätssicherung, insb. im Rahmen von Git und Testing.",
+                "en": "Establishing internal QA-processes, especially regarding git and testing."
+              },
+              {
+                "de": "Konzeption und Umsetzung von Barrierefreiheit auf der B2B-Anwendung, technische Unterstützung für Marketing",
+                "en": "Conceptualizing and implementation of accessibility for our b2b-app, technical support for marketing"
+              }
+            ]
+          }
+        },
+        {
+          "title": {
+            "de": "Seit 2016: Selbstständigkeit als Webentwickler",
+            "en": "From 2016: Self-employed web developer"
+          },
+          "content": {
+            "summary": {
+              "de": "Erweiterung der Arbeit auf das Gebiet der Webentwicklung und Vertiefung der entsprechenden Fertigkeiten.",
+              "en": "Expanding work into the area of web development and deepening the corresponding skills."
+            },
+            "text": [
+              {
+                "de": "Wichtige Aufgabenbereiche:",
+                "en": "Important areas of responsibility:"
+              },
+              {
+                "de": "Planung von Projektumfang und -dauer.",
+                "en": "Planning of project scope and duration."
+              },
+              {
+                "de": "Laufende Kommunikation mit Kunden für den kontinuierlichen Verbesserungsprozess.",
+                "en": "Ongoing communication with customers for the continuous improvement process."
+              },
+              {
+                "de": "Technische Umsetzung des Styleguides sowie die Interpretation und Implementierung von Ideen.",
+                "en": "Technical implementation of style guides, as well as the interpretation and implementation of ideas."
+              },
+              {
+                "de": "Breit gefächerter Tech-Stack, um diverse Anforderungen gezielt erfüllen zu können.",
+                "en": "Fairly broad tech stack, to properly fulfill all requests."
+              }
+            ]
+          }
+        },
+        {
+          "title": {
+            "de": "2011 - 2020: RheinEnergie AG",
+            "en": "2011 - 2020: RheinEnergie AG"
+          },
+          "content": {
+            "summary": {
+              "de": "Ausbildung zum Informatiker im Rahmen eines dualen Studiums bei der RheinEnergie AG. Vollzeit angestellt seit Dezember 2014 im Bereich Prozessautomation.",
+              "en": "Apprenticeship as a computer scientist within a dual study program at RheinEnergie AG. Full-time employee since December 2014."
+            },
+            "text": {
+              "de": "Schwerpunktmäßige Arbeit rund um Geschäftsprozessautomation für SAP und sonstige Software. Konzeption, Implementierung und Pflege von automatisierten Prozessen. Enge Zusammenarbeit mit den Bereichen HR, Kundenabrechnung und Trading sowie nahezu allen IT-Bereichen. Arbeit mit diversen Protokollen zur Übersetzung und Unterstützung von verschiedenen APIs, insbesondere SAP, SEPA, FTP, SNMP, REST und SOAP.",
+              "en": "Main focus on business process automation for SAP and other data-driven software. Worked on design, implementing and maintaining scheduled and ad hoc processes. Close cooperation with HR, customer accounting and trading departments, as well as all IT departments. Worked with various protocols, to translate and support various APIs, especially SAP, SEPA, FTP, SNMP, REST and SOAP."
+            }
+          }
+        }
+      ]
+    },
+    "skills": {
+      "great_at": {
+        "title": {
+          "de": "Großartig mit:",
+          "en": "Great at:"
+        },
+        "text": {
+          "de": "React, ts, Next, Nest, semantisches html, css, Barrierefreiheit, Mentoring, alles rund um Agilität, Git, Packaging (npm), CI/CD, Layouting und UX-Design",
+          "en": "React, ts, Next, Nest, semantic html, css, accessibility, mentoring, all things agile, git, packaging (npm), ci/cd, layouting and ux design"
+        }
+      },
+      "other_skills": {
+        "title": {
+          "de": "Sonstige Fertigkeiten:",
+          "en": "Other skills:"
+        },
+        "text": {
+          "de": "SAP, SQL, three.js, Java EE, jQuery, Multicash",
+          "en": "SAP, SQL, three.js, Java EE, jQuery, Multicash"
+        }
+      }
+    },
+    "outsideWork": {
+      "title": {
+        "de": "Außerhalb der Arbeit",
+        "en": "Outside of work"
+      },
+      "content": [
+        {
+          "title": {
+            "de": "2010 - 2018: Pfadfinder in Köln",
+            "en": "2010 - 2018: Scouting in cologne"
+          },
+          "text": {
+            "de": "Jugendgruppenleiter (6 Jahre), Geschäftsführer (4 Jahre), Webmaster (7 Jahre), Projektleitung bei Großveranstaltungen.\n",
+            "en": "Youth group leader (6 years), monetary manager (4 years), webmaster (7 years), project management at major events.\n"
+          }
+        },
+        {
+          "title": {
+            "de": "2018 & 2019: Verschiedene Ehrenämter",
+            "en": "2018 & 2019: Various volunteer positions"
+          },
+          "text": {
+            "de": "Innenausbau Berghütte; IT Unterstützung im Botanischen Garten; Design und Aufbau von einem Pop-up Café; Kletterlehrer\n",
+            "en": "Interior construction of a mountain hut; IT support in a botanical garden; design and construction of a pop-up café; climbing instructor\n"
+          }
+        },
+        {
+          "title": {
+            "de": "Und sonst so?",
+            "en": "What else?"
+          },
+          "text": {
+            "de": "Klettert (in jeglicher Form, am liebsten am Fels), kocht viel und gerne, Kaffeenerd, Handwerker.",
+            "en": "Loves climbing (in any form, preferably on rocks), likes to cook a lot, coffee nerd, carpenter."
+          }
+        }
+      ]
+    }
+  },
+  "aside": {
+    "contact": {
+      "title": {
+        "de": "Kontakt & Daten",
+        "en": "Contact & Data"
+      },
+      "dob": {
+        "de": "04.Oktober '91",
+        "en": "October 4th, 1991"
+      },
+
+      "address": [
+        {
+          "de": "Rubensstr. 36",
+          "en": "Rubensstr. 36"
+        },
+        {
+          "de": "D - 50676 Köln",
+          "en": "GER - 50676 Cologne"
+        }
+      ]
+    },
+    "education": {
+      "title": {
+        "de": "Bildungsweg",
+        "en": "Educational background"
+      },
+      "content": [
+        {
+          "title": {
+            "de": "Ausbildung",
+            "en": "Apprenticeship"
+          },
+          "text": {
+            "de": "Fachinformatiker Systemintegration, 2013, Köln",
+            "en": "IT Specialist for System Integration, 2013, Cologne"
+          }
+        },
+        {
+          "title": {
+            "de": "Studium",
+            "en": "Studies"
+          },
+          "text": {
+            "de": "B. Sc. Wirtschaftsinformatik / IT-Consulting, 2014, Bergisch-Gladbach",
+            "en": "B. Sc. Business Informatics / IT-Consulting, 2014, Bergisch-Gladbach"
+          }
+        }
+      ]
+    },
+    "languages": {
+      "title": {
+        "de": "Sprachen",
+        "en": "Languages"
+      },
+      "content": [
+        {
+          "de": "Deutsch",
+          "en": "English"
+        },
+        {
+          "de": "und",
+          "en": "and"
+        },
+        {
+          "de": "Englisch",
+          "en": "German"
+        }
+      ]
+    },
+    "ref": {
+      "title": {
+        "de": "Referenzen",
+        "en": "References"
+      },
+      "content": {
+        "screen": {
+          "de": "Zwischenzeugnis der RheinEnergie AG",
+          "en": "Interim report from RheinEnergie AG (in German)"
+        },
+        "print": {
+          "de": "Zwischenzeugnis der RheinEnergie AG, als Anhang",
+          "en": "Interim report from RheinEnergie AG, as attachment (in German)"
+        }
+      }
+    },
+    "update": {
+      "de": "Zuletzt aktualisiert:",
+      "en": "Last updated:"
+    }
+  }
+}
